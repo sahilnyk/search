@@ -4,11 +4,11 @@
 
 <style>
 .loader {
-  margin: 24px auto;
-  width: 42px;
-  height: 42px;
-  border: 4px solid #888;
-  border-top: 4px solid #4a90e2;
+  margin: 26px auto;
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255,255,255,.2);
+  border-top: 4px solid #8b5cf6;
   border-radius: 50%;
   animation: spin .7s linear infinite;
 }
