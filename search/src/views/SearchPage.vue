@@ -162,7 +162,6 @@ body {
 .title {
   letter-spacing: .5px;
   font-weight: 700;
-  transform: translateY(2px);
 }
 
 .theme-btn {
@@ -173,9 +172,6 @@ body {
   cursor: pointer;
   color: var(--text);
   transition: .3s ease;
-}
-.theme-btn:hover {
-  transform: scale(1.05);
 }
 
 .hint {
@@ -218,13 +214,16 @@ kbd {
   cursor: pointer;
   transition: .25s ease;
 }
+
 .pagination button:hover:not(:disabled) {
   transform: translateY(-2px);
 }
+
 .pagination button:disabled {
   opacity: .3;
   cursor: not-allowed;
 }
+
 .pagination span {
   opacity: .75;
   font-weight: 500;
@@ -234,6 +233,7 @@ kbd {
 .fade-leave-active {
   transition: opacity .35s ease;
 }
+
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
@@ -243,14 +243,50 @@ kbd {
 .list-leave-active {
   transition: all .35s ease;
 }
+
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
   transform: translateY(10px);
 }
 
-@media (max-width: 600px) {
-  .container { padding: 18px; }
-  .title { font-size: 20px; }
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+    padding: 22px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .hint {
+    font-size: 13px;
+  }
+  .search-area {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 16px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .theme-btn {
+    padding: 6px 9px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  .pagination {
+    gap: 10px;
+  }
+  .pagination button {
+    padding: 7px 8px;
+    border-radius: 8px;
+  }
+  .pagination span {
+    font-size: 14px;
+  }
 }
 </style>

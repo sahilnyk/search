@@ -13,22 +13,18 @@
 
 <script setup>
 import { ref, defineExpose } from "vue";
-
 const emit = defineEmits(["search"]);
 const text = ref("");
 let timer;
 const expanded = ref(false);
-
 function emitQuery() {
   clearTimeout(timer);
   timer = setTimeout(() => emit("search", text.value), 250);
 }
-
 function expand() {
   expanded.value = true;
   document.getElementById("searchBox")?.focus();
 }
-
 defineExpose({ expand });
 </script>
 
@@ -47,7 +43,6 @@ defineExpose({ expand });
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
-  opacity: .85;
 }
 .search-input {
   width: 100%;
@@ -61,5 +56,15 @@ defineExpose({ expand });
 }
 .search-input:focus {
   border-color: #7c4dff;
+}
+
+@media (max-width: 650px) {
+  .search-wrapper {
+    width: 100%;
+  }
+  .search-input {
+    padding: 12px 14px 12px 42px;
+    font-size: 14px;
+  }
 }
 </style>
